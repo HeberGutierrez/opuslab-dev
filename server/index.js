@@ -6,6 +6,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
+const port = process.env.PORT || 8080;
 //handle requests to messages
 app.get('/mesageopus', function (req, res) {
   database.selectAll(function(err, results) {
@@ -42,6 +43,6 @@ app.post('/sendMessage', function(req, res){
   }
 })
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log('listening on port 3000!');
 });
