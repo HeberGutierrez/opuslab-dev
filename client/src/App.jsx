@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import ContactForm from './component/Contact.jsx'
+import Video from './component/Video.jsx'
+
+
 const App =() => (
   <div>
-  <h1>Hello world!</h1>
+  <Video />
+  <ContactForm />
   </div>
 )
 
